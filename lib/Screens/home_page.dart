@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
             CustomButton(
                 text: 'Login',
                 onTap: () {
-                  Navigator.pushNamed(context, 'loginPage');
+                  Navigator.pushNamed(context, 'garagePage');
                 }),
             CustomButton(
                 text: 'Register',
