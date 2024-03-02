@@ -8,7 +8,7 @@ void main() {
     initialRoute: 'homePage',
     routes: {
       'homePage': (context) => const HomePage(),
-      'garagePage': (context) => const GaragePage(),
+      'garagePage': (context) => GaragePage(),
 
     },
   ));

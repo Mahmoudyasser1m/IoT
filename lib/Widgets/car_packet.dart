@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
+import 'package:slide_countdown/slide_countdown.dart';
 import '../constants.dart';
 
 
@@ -16,8 +17,13 @@ class CarPacket extends StatefulWidget {
 class _CarPacketState extends State<CarPacket> {
   bool used = false;
 
+  //DateTime endTime = DateTime.now().add(const Duration(hours: 2));
+  DateTime endTime = DateFormat('yyyy-MM-dd HH:mm:ss').parse('2024-3-2 23:59:59');
+
   @override
   Widget build(BuildContext context) {
+    DateTime currentTime = DateTime.now();
+    Duration remainingTime = endTime.difference(currentTime);
     return Padding(
       padding: const EdgeInsets.only(top: 58,left:  32),
       child: GestureDetector(
@@ -38,7 +44,13 @@ class _CarPacketState extends State<CarPacket> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 32),
-                child: Icon(used? Icons.disabled_by_default : Icons.garage_rounded,size: 40,color: Colors.white,),
+                child: Icon(used? Icons.lock_clock : Icons.garage_rounded,size: 40,color: Colors.white,),
+              ),
+              Visibility(
+                visible: used,
+                child: SlideCountdown(
+                  duration: remainingTime,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 3),
