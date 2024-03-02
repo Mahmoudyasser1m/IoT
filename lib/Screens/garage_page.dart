@@ -18,20 +18,20 @@ class GaragePage extends StatelessWidget {
           children: [
             Row(
               children: [
-                CarPacket(packetNum: '1'),
-                CarPacket(packetNum: '2'),
+                CarPacket(packetNum: Icons.looks_one_rounded),
+                CarPacket(packetNum: Icons.looks_two_rounded),
               ],
             ),
             Row(
               children: [
-                CarPacket(packetNum: '3'),
-                CarPacket(packetNum: '4'),
+                CarPacket(packetNum: Icons.looks_3_rounded),
+                CarPacket(packetNum: Icons.looks_4_rounded),
               ],
             ),
             Row(
               children: [
-                CarPacket(packetNum: '5'),
-                CarPacket(packetNum: '6'),
+                CarPacket(packetNum: Icons.looks_5_rounded),
+                CarPacket(packetNum: Icons.looks_6_rounded),
               ],
             ),
           ],
